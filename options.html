@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>resp0nsv options</title>
+		<meta name="author" content="Cory 'cr0ybot' Hughart" />
+		<meta name="description" content="options page for resp0nsv" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/chrome-bootstrap.css" />
+		<style>
+			input::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+			}
+			input::-webkit-outer-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+			input[type="number"] {
+				text-align: right;
+				width: 38px;
+			}
+			input, label {
+				vertical-align: middle;
+			}
+			#size-list {
+				/*
+				border: 1px solid #EEE;
+				border-left: none;
+				border-right: none;
+				*/
+				padding: 5px 0;
+				margin-top: 2px;
+				margin-bottom: 6px;
+			}
+			.list {margin-top: 0;}
+			.list li {
+				list-style-type: disc;
+				margin-left: 20px;
+			}
+		</style>
+	</head>
+	<body class="frame">
+		<div class="navigation">
+			<h1>resp0nsv</h1>
+			<ul class="menu">
+				<li class="selected">
+					<a href="#size-presets">Size Presets</a>
+				</li>
+				<li>
+					<a href="#info">Info</a>
+				</li>
+				<li>
+					<a href="#privacy">Privacy</a>
+				</li>
+			</ul>
+		</div>
+		<div class="mainview view">
+			<div id="size-presets" class="selected">
+				<header>
+					<h1>Size Presets</h1>
+				</header>
+				<div class="content">
+					<h3>Add or remove quick-set sizes from resp0nsv:</h3>
+					<input id="all-size" type="checkbox" /> <label for="all-size">Select all</label>
+					<ul id="size-list"></ul>
+					<button class="function" value="add sizePresets">Add new size preset</button>
+					<button class="function remove" value="remove sizePresets" disabled="">Remove selected items</button>
+					<div class="controls">
+						<button class="function" value="save sizePresets">Save Size Presets</button>
+						<div class="spacer"></div>
+						<button class="function" value="undo sizePresets">Undo Changes</button>
+						<button class="function" value="reset sizePresets">Reset to defaults</button>
+					</div>
+				</div>
+			</div>
+			<div id="info">
+				<header>
+					<h1>Info</h1>
+				</header>
+				<div class="content">
+					<h3>What is resp0nsv?</h3>
+					<p><b>Resp0nsv</b> is a tool for web developers creating responsive websites.</p>
+					<p>At it's core, it is a manipulable iframe, within which is the page you initialized resp0nsv on. This is not ideal, because it makes inspection with developer tools a bit cumbersome, but it is perhaps easier to use for simple viewing than Chrome's built-in "device-metrics overrides". If you couldn't tell, resp0nsv was inspired by the built-in <a href="https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_View">Firefox "Responsive Design View"</a>.</p>
+					<h3>Why should I use resp0nsv? It's just a stupid iframe.</h3>
+					<p>It's more than just an iframe. You can save your own screen size presets, resize it by hand without your browser chrome getting in the way, and you can even "rotate" the screen.</p>
+					<p>If you aren't convinced, or if you've got a suggestion that would make this more useful, please use the "Send Feedback" link on the Chrome Extension web store page.</p>
+					<h3>How do I use it?</h3>
+					<p>You can change the size of the responsive preview in a number of ways:</p>
+					<ol class="list">
+						<li>Use the resizing handles on the right, bottom, and bottom-right corner.</li>
+						<li>Type in the width and height you want at the upper-left, under the url. You can also activate the input by clicking, and use your arrow keys or mouse wheel to change the number incrementally.</li>
+						<li>Choose a size preset from the preset list. These presets can be modified in the <a href="#size-presets">Size Presets</a> pane.</li>
+					</ol>
+					<h3>Why is the background transparent?</h3>
+					<p>You didn't set a background-color on your body or html element.</p>
+					<h3>Who made resp0nsv?</h3>
+					<p><b>Resp0nsv</b> was developed by <a href="http://www.coryhughart.com" target="_blank">Cory Hughart</a>, a.k.a. 'cr0ybot'.</p>
+					<h3>How can I support resp0nsv?</h3>
+					<p>I made this mainly to help myself with responsive web development, but if you feel like it's helped you too and you want to show your support, you can donate some bitcoins!</p>
+					<p><i class="fa fa-btc"></i><a href="bitcoin:1GdBCs2C18kTTJYUt85Znaa3ep5dpAtuVZ?amount=0.01&label=resp0nsv" target="_blank">1GdBCs2C18kTTJYUt85Znaa3ep5dpAtuVZ</a></p>
+					<p><img src="img/qr_bitcoin.png" alt="1GdBCs2C18kTTJYUt85Znaa3ep5dpAtuVZ" /></p>
+				</div>
+			</div>
+			<div id="privacy">
+				<header>
+					<h1>Privacy</h1>
+				</header>
+				<div class="content">
+					<h3>Google Analytics Notice</h3>
+					<p>I (Cory Hughart) am using Google Analytics to track usage data of the resp0nsv Google Chrome extension. Tracking certain information allows me to better understand how you use resp0nsv, including how to make it better. No personally identifiable information about you is made available to me, but I cannot promise the same for Google. Please have a look at <a href="http://www.google.com/analytics/learn/privacy.html">Google's privacy policy</a>.</p>
+					<p>Google Analytics captures data about you, and you deserve to know this and have the ability to opt out. You can skip to the end of this right now and untick the checkbox below to opt out of analytics altogether, if you'd like. I respect your right to privacy, and I apologize if you are put off by this.</p>
+					<h4>What Google Analytics records:</h4>
+					<ul class="list">
+						<li>Your approximate location (down to the city level).</li>
+						<li>What kind of browser (obviously Google Chrome), operating system, and device you are using.</li>
+						<li>How long you stay on certain pages.</li>
+						<li>What you click on.</li>
+						<li>...and much more; most of which may not be useful for usage analytics on an extension.</li>
+					</ul>
+					<h4>What I may learn from your data:</h4>
+					<ul class="list">
+						<li>If usage is high enough in specific locations, localization might be needed.</li>
+						<li>If users are spending less time with resp0nsv on one platform vs another, I may need to check for bugs on those devices/OS's.</li>
+						<li>If certain features are rarely used but feature prominently in the UI, it may need to be moved (the converse is also a possibility).</li>
+						<li>...and much, much more.</li>
+					</ul>
+					<h4>Untick the checkbox below if you wish to opt out of resp0nsv's use of Google Analytics:</h4>
+					<form class="form">
+						<input id="analytics" type="checkbox" />
+						<label for="analytics">Send anonymous usage data (via Google Analytics) to help the author (Cory Hughart) improve resp0nsv.</label>
+						<div class="controls">
+							<button type="submit" class="function" value="save analytics">Save Privacy Settings</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<p>resp0nsv © 2014 Cory Hughart | this page uses a modified version of <a href="https://github.com/roykolak/chrome-bootstrap" target="_blank">Chrome UI Bootstrap by roykolak</a></p>
+		</footer>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/options.js"></script>
+	</body>
+</html>

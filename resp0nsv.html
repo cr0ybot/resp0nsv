@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<title>resp0nsv</title>
+		<meta name="author" content="Cory 'cr0ybot' Hughart" />
+		<meta name="description" content="resp0nsv, a responsive design testing tool, similar to Firefox's Responsive Design View" />
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css' />
+		<link rel="stylesheet" href="css/resp0nsv-theme/jquery-ui-1.10.3.custom.min.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body data-resp0nsv="true">
+		<header>
+			<form id="input">
+				<div id="src-box">
+					<button id="refresh" title="refresh" name="refresh" value="refresh" type="button"><i class="fa fa-repeat"></i></button>
+					<input id="src" name="src" title="url" value="" type="url" />
+				</div>
+				<div class="item-box">
+					<div id="size-box" class="item">
+						<input id="size-w" name="sizeW-w" title="width" value="800" min="0" type="number"/>
+						<span class="x"><i class="fa fa-times"></i></span>
+						<input id="size-h" name="size-h" title="height" value="600" min="0" type="number" />
+						<button id="rotate" title="rotate" name="rotate" value="rotate" type="button"><i class="fa fa-refresh"></i></button>
+					</div>
+					<div id="preset-box" class="item">
+						<div class="select-item">
+							<select id="presets" name="presets" title="size presets">
+								<option value="default" selected="">Presets</option>
+							</select>
+						</div>
+						<button id="add-preset" title="save current size as preset" name="add-preset" value="add-preset" type="button"><i class="fa fa-plus"></i></button>
+					</div>
+					<div id="options-box" class="item">
+						<a class="button" title="options" href="options.html" target="_blank"><i class="fa fa-cogs"></i></a>
+					</div>
+				</div>
+			</form>
+		</header>
+		<div id="dialog">
+			<div id="add-preset-dialog" title="Add new size preset">
+				<form id="add-preset-form">
+					<p class="text-right">
+						<label for="name">Name:</label>
+						<input type="text" name="name" value="preset" class="text" />
+					</p>
+					<p class="text-right">
+						<label for="width">Width:</label>
+						<input type="number" name="width" value="" class="text" />
+					</p>
+					<p class="text-right">
+						<label for="height">Height:</label>
+						<input type="number" name="height" value="" class="text" />
+					</p>
+				</form>
+			</div>
+		</div>
+		<div id="main">
+			<div id="resizer" class="ui-widget-content">
+				<iframe id="viewport" frameBorder="0"></iframe>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="js/resp0nsv.js"></script>
+	</body>
+</html>
